@@ -1,8 +1,7 @@
-//using 
 using System;
 using System.Windows.Forms;
 
-namespace TcpServerApp
+namespace TcpClientApp
 {
     static class Program
     {
@@ -11,7 +10,7 @@ namespace TcpServerApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TcpServerForm());
+            Application.Run(new TcpClientForm());
         }
     }
 }

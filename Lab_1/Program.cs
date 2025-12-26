@@ -1,17 +1,17 @@
+using Lab_1;
 using System;
 using System.Windows.Forms;
-using static System.Windows.Forms.DataFormats;
 
-namespace Rs232Chat
+namespace SerialChat
 {
-    internal static class Program
+    static class Program
     {
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }

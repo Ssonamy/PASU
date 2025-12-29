@@ -53,7 +53,6 @@ namespace Recieving_data
             txt_port.Text = "8080";
 
             fileTimer.Tick += fileTimer_Tick;
-            scrollBarHistory.Scroll += scrollBarHistory_Scroll;
         }
 
         // ----------------- Кнопки -----------------
@@ -392,31 +391,6 @@ namespace Recieving_data
             using OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
                 txt_name_file.Text = ofd.FileName;
-        }
-
-        private Color HsvToRgb(double h, double s, double v)
-        {
-            int hi = ((int)Math.Floor(h / 60)) % 6;
-            double f = h / 60 - Math.Floor(h / 60);
-            double p = v * (1 - s);
-            double q = v * (1 - f * s);
-            double t = v * (1 - (1 - f) * s);
-
-            double r = 0, g = 0, b = 0;
-            switch (hi)
-            {
-                case 0: r = v; g = t; b = p; break;
-                case 1: r = q; g = v; b = p; break;
-                case 2: r = p; g = v; b = t; break;
-                case 3: r = p; g = q; b = v; break;
-                case 4: r = t; g = p; b = v; break;
-                case 5: r = v; g = p; b = q; break;
-            }
-
-            return Color.FromArgb(
-                Math.Clamp((int)Math.Round(r * 255), 0, 255),
-                Math.Clamp((int)Math.Round(g * 255), 0, 255),
-                Math.Clamp((int)Math.Round(b * 255), 0, 255));
         }
     }
 }

@@ -1,6 +1,6 @@
 using Recieving_data;
 
-namespace Lab_6._1
+namespace Recieving_data
 {
     internal static class Program
     {

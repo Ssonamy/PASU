@@ -135,7 +135,6 @@
             this.btn_selectFile.Size = new System.Drawing.Size(95, 35);
             this.btn_selectFile.Text = "Select File";
             this.btn_selectFile.UseVisualStyleBackColor = true;
-            this.btn_selectFile.Click += new System.EventHandler(this.btn_selectFile_Click);
 
             // txt_name_file
             this.txt_name_file.Location = new System.Drawing.Point(16, 30);

@@ -2,7 +2,7 @@ using System;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
 
-namespace Client
+namespace Server
 {
     static class Program
     {
@@ -11,7 +11,7 @@ namespace Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Client());
+            Application.Run(new Server());
         }
     }
 }

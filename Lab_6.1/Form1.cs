@@ -28,7 +28,6 @@ namespace Recieving_data
 
         private List<int> currentFrame;
         private DateTime currentTimeOfFrame;
-        private bool redrawRequested;
 
         private int fileFrameCounter = 0;
         private static readonly Color[] FrameColorPalette = {
@@ -45,10 +44,9 @@ namespace Recieving_data
             queueLock = new object();
 
             isPaused = false;
-            redrawRequested = false;
             stopRequested = false;
 
-            txt_name_file.Text = "C:\\work\\Проектирование_алгоритмов_систем_управления\\test.txt";
+            txt_name_file.Text = "C:\\Users\\Ssonamy\\Desktop\\Учеба\\ПАСУ\\lab_6\\test.txt";
             txt_freq.Text = "200";
             txt_port.Text = "8080";
 
@@ -207,7 +205,6 @@ namespace Recieving_data
 
                 fileFrameCounter++;
                 EnqueueFrame(distances, timeNow);
-                redrawRequested = true;
                 PreparingForDisplay();
             }
             catch (Exception ex)
